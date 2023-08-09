@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background-image: url(../content/bg.jpg);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    /*for making content in body flexible and in center*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hiscore,#score{
+    position: absolute;
+    top: 3px;
+    right: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Caveat', cursive;
+    padding: 0.5%;
+    background: rgba(211, 245, 179, 0.673);
+}
+#score{
+    top: 65px;
+    border: 5px solid rgba(22, 126, 13, 0.557);
+    border-radius: 20px;
+}
+
+#board{
+    background: linear-gradient(rgb(137, 251, 137), rgb(251, 141, 141));
+    height: 90vmin;
+    width: 94vmin;
+    border: 2px solid black;
+    /*for making grid in board*/
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+/*head part of snake*/
+.head{
+    transform: scale(1.06);
+    background-color: rgb(255, 0, 0);
+    border: 0.55vmin solid white;
+    border-radius: 12px;
+}
+
+.snake{
+    background-color: rgb(255, 189, 58);
+    border-radius: 30px;
+}
+
+.food{
+    background: linear-gradient(rgb(230, 66, 255),rgb(69, 219, 253));
+    border-radius: 20px;
+    border: 0.30vmin  solid brown;
+}
